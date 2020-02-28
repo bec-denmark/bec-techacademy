@@ -4,8 +4,6 @@ import com.bec.techacademy.learnkafka.datamodel.event.Account;
 import com.bec.techacademy.learnkafka.datamodel.event.Customer;
 import com.bec.techacademy.learnkafka.datamodel.event.SpecificRecordAdapter;
 import com.bec.techacademy.learnkafka.datamodel.event.SpecificRecordDeserializer;
-import com.bec.techacademy.learnkafka.datamodel.event.SpecificRecordAdapter;
-import com.bec.techacademy.learnkafka.examples.serializer.KafkaSerializer;
 
 import com.bec.techacademy.learnkafka.examples.serializer.KafkaDeserializer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
@@ -50,8 +48,8 @@ public class KafkaConsumerConfig {
     @Bean
     public Map<String, SpecificRecordDeserializer> topicDeserializer(){
         final HashMap<String, SpecificRecordDeserializer> map = new HashMap<>();
-        map.put(accountTopic, new SpecificRecordDeserializer<Account>(new Account().getSchema()));
-        map.put(customerTopic, new SpecificRecordDeserializer<Customer>(new Customer().getSchema()));
+        map.put(accountTopic, new SpecificRecordDeserializer(new Account().getSchema()));
+        map.put(customerTopic, new SpecificRecordDeserializer(new Customer().getSchema()));
 
         return map;
     }
