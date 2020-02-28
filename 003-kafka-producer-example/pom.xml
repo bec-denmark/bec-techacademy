@@ -20,7 +20,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>dk.martincallesen.datamodel.event</groupId>
+            <groupId>com.bec.techacademy.learnkafka.datamodel.event</groupId>
             <artifactId>bank-datamodel-example</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>

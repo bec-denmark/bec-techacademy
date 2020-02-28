@@ -1,9 +1,6 @@
 package com.bec.techacademy.learnkafka.examples.consumer;
 
-import dk.martincallesen.datamodel.event.Account;
-import dk.martincallesen.datamodel.event.Customer;
-import dk.martincallesen.datamodel.event.SpecificRecordAdapter;
-import dk.martincallesen.datamodel.event.SpecificRecordDeserializer;
+import com.bec.techacademy.learnkafka.datamodel.event.SpecificRecordAdapter;
 import dk.martincallesen.serializer.KafkaSerializer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
