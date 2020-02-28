@@ -1,6 +1,6 @@
 package com.bec.techacademy.learnkafka.examples.producer;
 
-import dk.martincallesen.datamodel.event.SpecificRecordAdapter;
+import com.bec.techacademy.learnkafka.datamodel.event.SpecificRecordAdapter;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.SendResult;
 import org.springframework.stereotype.Component;
