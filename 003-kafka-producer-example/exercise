@@ -1,0 +1,4 @@
+Exercise:
+
+Using the data model with payment type created in preceding exercise, have an event produced to a new topic "payments"
+(Hint: Create an Integration Test to verify Producer)
