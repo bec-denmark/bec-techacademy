@@ -3,10 +3,14 @@
 ## Pre-Requisites
 Local setup of docker, docker-compose
 On linux/Mac, install docker compose using:
+
    a. sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+   
    b. sudo chmod +x /usr/local/bin/docker-compose
+   
    c. Verify docker compose version using "docker-compose --version"
-Local setup of https://github.com/confluentinc/examples/tree/5.4.0-post/cp-all-in-one running
+
+And you have local setup of https://github.com/confluentinc/examples/tree/5.4.0-post/cp-all-in-one running
 
 ## Kafka Topic
 
