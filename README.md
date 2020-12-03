@@ -11,7 +11,7 @@ mvn compile exec:java
 Open a terminal and in directory ./consumer 
 mvn compile exec:java
 
-## Use full commands
+## Usefull  terminal commands
 
 ###Producer to topic with console producer
 ./kafka-console-producer.sh --broker-list localhost:9092 --topic topic1
@@ -25,3 +25,8 @@ mvn compile exec:java
 ###See Consumer lag
 ./kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --all-groups
 
+### Run the java producer solution
+mvn compile exec:java -Dexec-maven-plugin.mainClass=com.github.kafka.SimpleProducerSolution
+
+### Run the java consumer solution
+mvn compile exec:java -Dexec-maven-plugin.mainClass=com.github.kafka.SimpleConsumerSolution
