@@ -13,7 +13,7 @@ import java.util.Properties;
 public class ProducerTopic1Solution {
     public static void main(String[] args) {
         Logger logger = LoggerFactory.getLogger(ProducerTopic1Solution.class);
-        logger.info("ProducerSolution is running");
+        logger.info("ProducerTopic1Solution is running");
         //Todo Create producer properties for connection to local kafka instance
         String bootstrapServers = "127.0.0.1:9092";
 

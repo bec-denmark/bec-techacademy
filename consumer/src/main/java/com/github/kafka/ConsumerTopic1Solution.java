@@ -16,7 +16,7 @@ import static java.util.Collections.singletonList;
 public class ConsumerTopic1Solution {
     public static void main(String[] args) {
         Logger logger = LoggerFactory.getLogger(ConsumerTopic1Solution.class);
-        logger.info("Consumer is running");
+        logger.info("ConsumerTopic1Solution is running");
         //Todo Create consumer configuration for connection to local kafka instance
         String bootstrapServers = "127.0.0.1:9092";
         String groupId = "java-consumer-group";
