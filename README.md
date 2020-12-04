@@ -19,16 +19,16 @@ mvn compile exec:java
 
 ## Usefull  terminal commands
 
-###Producer to topic with console producer
+### Producer to topic with console producer
 ./kafka-console-producer.sh --broker-list localhost:9092 --topic topic1
 
-###Consume from topic with console consumer
+### Consume from topic with console consumer
 ./kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topic1 --group first-group
 
-###List Topics
+### List Topics
 ./kafka-topics.sh --bootstrap-server localhost:9092 --describe
 
-###See Consumer lag
+### See Consumer lag
 ./kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --all-groups
 
 ### Run the java producer or consumer exercise
