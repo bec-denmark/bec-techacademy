@@ -7,7 +7,7 @@ public class ProducerTopic1WithKeyExercise {
 
         //Todo Create the Producer
 
-        //Todo send data to topic with name topic2 with key
+        //Todo send data to topic with name topic1 with key
 
     }
 }
