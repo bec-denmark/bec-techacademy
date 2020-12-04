@@ -10,7 +10,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>ProducerDemo</artifactId>
+    <artifactId>ProducerExercises</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
