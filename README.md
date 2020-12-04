@@ -1,6 +1,12 @@
 # Description
 Releated code to the udemy course https://bec.udemy.com/course/apache-kafka/learn
 
+Installation of apache kafka
+https://kafka.apache.org/quickstart
+
+Installation of apache zookeeper
+https://zookeeper.apache.org/doc/current/zookeeperStarted.html
+
 #How to's
 
 ##Run Producer
