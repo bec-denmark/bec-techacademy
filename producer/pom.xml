@@ -14,7 +14,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <exec-maven-plugin.mainClass>com.github.kafka.ProducerExercise</exec-maven-plugin.mainClass>
+        <exec-maven-plugin.mainClass>com.github.kafka.ProducerTopic1Exercise</exec-maven-plugin.mainClass>
     </properties>
 
 </project>

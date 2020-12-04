@@ -10,10 +10,10 @@ import org.slf4j.LoggerFactory;
 import java.time.LocalDateTime;
 import java.util.Properties;
 
-public class ProducerWithKeySolution {
+public class ProducerTopic1Solution {
     public static void main(String[] args) {
-        Logger logger = LoggerFactory.getLogger(ProducerSolution.class);
-        logger.info("ProducerWithKeysSolution is running");
+        Logger logger = LoggerFactory.getLogger(ProducerTopic1Solution.class);
+        logger.info("ProducerSolution is running");
         //Todo Create producer properties for connection to local kafka instance
         String bootstrapServers = "127.0.0.1:9092";
 
@@ -26,14 +26,10 @@ public class ProducerWithKeySolution {
         KafkaProducer<String, String> producer = new KafkaProducer<>(properties);
 
         //Todo send data to topic
-        for (int i = 0; i < 10; i++) {
-            String topic = "topic1";
-            String value = "Hello world "+ LocalDateTime.now();
-            String key = "id_key_"+i;
-            ProducerRecord<String, String> record = new ProducerRecord<>(topic, key, value);
-            producer.send(record);
-        }
-
+        String topic = "topic1";
+        String value = "Hello world "+ LocalDateTime.now();
+        ProducerRecord<String, String> record = new ProducerRecord<>(topic, value);
+        producer.send(record);
         producer.flush();
         producer.close();
     }
