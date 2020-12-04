@@ -12,7 +12,7 @@ public class ProducerWithCallbackSolution {
 
     public static void main(String[] args) {
         Logger logger = LoggerFactory.getLogger(ProducerWithCallbackSolution.class);
-        logger.info("Producer with callback is running");
+        logger.info("ProducerWithCallbackSolution is running");
         //Todo Create producer properties for connection to local kafka instance
         String bootstrapServers = "127.0.0.1:9092";
 
