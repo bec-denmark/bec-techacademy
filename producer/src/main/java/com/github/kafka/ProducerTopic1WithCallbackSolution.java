@@ -32,7 +32,7 @@ public class ProducerTopic1WithCallbackSolution {
         ProducerRecord<String, String> record = new ProducerRecord<>(topic, value);
         producer.send(record, (recordMetadata, e) -> {
             if(e == null){
-                logger.info("Record send successfully");
+                logger.info("Record send successfully. "+recordMetadata);
             } else {
                 logger.error("Record send failed", e);
             }
