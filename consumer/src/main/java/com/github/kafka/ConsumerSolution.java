@@ -5,6 +5,8 @@ import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.StringDeserializer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 import java.util.Properties;
@@ -13,7 +15,8 @@ import static java.util.Collections.singletonList;
 
 public class ConsumerSolution {
     public static void main(String[] args) {
-        System.out.println("Consumer is running");
+        Logger logger = LoggerFactory.getLogger(ConsumerSolution.class);
+        logger.info("Consumer is running");
         //Todo Create consumer configuration for connection to local kafka instance
         String bootstrapServers = "127.0.0.1:9092";
         String groupId = "java-consumer-group";
@@ -36,7 +39,7 @@ public class ConsumerSolution {
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
 
             for(ConsumerRecord<String, String> record : records){
-                System.out.println(record);
+                logger.info("Consuming :"+record);
             }
         }
     }

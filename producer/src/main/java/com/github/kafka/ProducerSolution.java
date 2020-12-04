@@ -4,13 +4,16 @@ import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.time.LocalDateTime;
 import java.util.Properties;
 
 public class ProducerSolution {
     public static void main(String[] args) {
-        System.out.println("Producer is running");
+        Logger logger = LoggerFactory.getLogger(ProducerSolution.class);
+        logger.info("Producer is running");
         //Todo Create producer properties for connection to local kafka instance
         String bootstrapServers = "127.0.0.1:9092";
 
