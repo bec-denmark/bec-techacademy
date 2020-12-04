@@ -11,7 +11,7 @@ import java.util.Properties;
 
 import static java.util.Collections.singletonList;
 
-public class SimpleConsumerSolution {
+public class ConsumerSolution {
     public static void main(String[] args) {
         System.out.println("Consumer is running");
         //Todo Create consumer configuration for connection to local kafka instance

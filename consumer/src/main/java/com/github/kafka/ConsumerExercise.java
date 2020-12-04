@@ -1,6 +1,6 @@
 package com.github.kafka;
 
-public class SimpleConsumerExercise {
+public class ConsumerExercise {
     public static void main(String[] args) {
         System.out.println("Consumer is running");
         //Todo Create consumer configuration for connection to local kafka instance

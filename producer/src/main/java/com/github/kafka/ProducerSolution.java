@@ -1,18 +1,16 @@
 package com.github.kafka;
 
-import org.apache.kafka.clients.producer.*;
+import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.ProducerConfig;
+import org.apache.kafka.clients.producer.ProducerRecord;
 import org.apache.kafka.common.serialization.StringSerializer;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.time.LocalDateTime;
 import java.util.Properties;
 
-public class CallbackProducerSolution {
-
+public class ProducerSolution {
     public static void main(String[] args) {
-        Logger logger = LoggerFactory.getLogger(CallbackProducerSolution.class);
-        logger.info("Producer with callback is running");
+        System.out.println("Producer is running");
         //Todo Create producer properties for connection to local kafka instance
         String bootstrapServers = "127.0.0.1:9092";
 
@@ -25,18 +23,10 @@ public class CallbackProducerSolution {
         KafkaProducer<String, String> producer = new KafkaProducer<>(properties);
 
         //Todo send data to topic
-        //Todo Print "Record send successfully" to console when a record was successfully send
-        //Todo Print "Record send failed" to console when a record was not successfully send
         String topic = "topic1";
         String value = "Hello world "+ LocalDateTime.now();
         ProducerRecord<String, String> record = new ProducerRecord<>(topic, value);
-        producer.send(record, (recordMetadata, e) -> {
-            if(e == null){
-                logger.info("Record send successfully");
-            } else {
-                logger.error("Record send failed", e);
-            }
-        });
+        producer.send(record);
         producer.flush();
         producer.close();
     }

@@ -41,10 +41,10 @@ mvn compile exec:java
 mvn compile exec:java
 
 ### Run the java producer solution
-mvn compile exec:java -Dexec-maven-plugin.mainClass=com.github.kafka.SimpleProducerSolution
+mvn compile exec:java -Dexec-maven-plugin.mainClass=com.github.kafka.ProducerSolution
 
 ### Run the java consumer solution
-mvn compile exec:java -Dexec-maven-plugin.mainClass=com.github.kafka.SimpleConsumerSolution
+mvn compile exec:java -Dexec-maven-plugin.mainClass=com.github.kafka.ConsumerSolution
 
 ### Start broker
 ~/kafka/kafka_2.13-2.6.0/bin/kafka-server-start.sh ~/kafka/kafka_2.13-2.6.0/config/server.properties

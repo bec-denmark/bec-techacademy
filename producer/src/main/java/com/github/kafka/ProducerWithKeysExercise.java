@@ -1,12 +1,13 @@
 package com.github.kafka;
 
-public class SimpleProducerExercise {
+public class ProducerWithKeysExercise {
     public static void main(String[] args) {
-        System.out.println("Producer is running");
+        System.out.println("Producer with callback is running");
         //Todo Create producer properties for connection to local kafka instance
 
         //Todo Create the Producer
 
-        //Todo send data to topic
+        //Todo send data to topic with key
+
     }
 }
