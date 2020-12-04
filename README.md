@@ -7,13 +7,13 @@ https://kafka.apache.org/quickstart
 Installation of apache zookeeper
 https://zookeeper.apache.org/doc/current/zookeeperStarted.html
 
-#How to's
+# How to's
 
-##Run Producer
+## Run Producer
 Open a terminal and in directory ./producer
 mvn compile exec:java
 
-##Run consumer
+## Run consumer
 Open a terminal and in directory ./consumer 
 mvn compile exec:java
 
@@ -27,6 +27,12 @@ mvn compile exec:java
 
 ### List Topics
 ./kafka-topics.sh --bootstrap-server localhost:9092 --describe
+
+### Create topic
+
+
+### Delete topic
+./kafka-topics.sh --bootstrap-server localhost:9092 --topic topic2 --delete
 
 ### See Consumer lag
 ./kafka-consumer-groups.sh --bootstrap-server localhost:9092 --describe --all-groups
