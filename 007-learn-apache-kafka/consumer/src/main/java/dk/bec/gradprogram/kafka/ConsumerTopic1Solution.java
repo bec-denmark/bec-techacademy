@@ -1,4 +1,4 @@
-package com.github.kafka;
+package dk.bec.gradprogram.kafka;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;

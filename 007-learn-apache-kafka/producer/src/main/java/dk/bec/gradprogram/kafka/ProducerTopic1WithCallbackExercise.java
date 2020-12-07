@@ -1,4 +1,4 @@
-package com.github.kafka;
+package dk.bec.gradprogram.kafka;
 
 public class ProducerTopic1WithCallbackExercise {
     public static void main(String[] args) {
