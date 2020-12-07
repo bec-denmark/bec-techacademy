@@ -1,14 +1,14 @@
 package dk.bec.gradprogram.kafka;
 
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import static dk.bec.gradprogram.kafka.KafkaConsumerPrinter.createConsumerPrinter;
+import static dk.bec.gradprogram.kafka.LoggerFactory.logRunning;
 
 public class ConsumerTopic1Solution {
     public static void main(String[] args) {
-        Logger logger = LoggerFactory.getLogger(ConsumerTopic1Solution.class);
-        logger.info("Running");
+        Logger logger = logRunning(ConsumerTopic1Solution.class);
         createConsumerPrinter().subscribeTo("topic1").poll(logger);
     }
+
 }

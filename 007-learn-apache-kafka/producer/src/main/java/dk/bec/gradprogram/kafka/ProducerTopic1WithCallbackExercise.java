@@ -1,12 +1,10 @@
 package dk.bec.gradprogram.kafka;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import static dk.bec.gradprogram.kafka.LoggerFactory.logRunning;
 
 public class ProducerTopic1WithCallbackExercise {
     public static void main(String[] args) {
-        Logger logger = LoggerFactory.getLogger(ProducerTopic1WithCallbackExercise.class);
-        logger.info("Running");
+        logRunning(ProducerTopic1WithCallbackExercise.class);
         //Todo Create producer properties for connection to local kafka instance
 
         //Todo Create the Producer

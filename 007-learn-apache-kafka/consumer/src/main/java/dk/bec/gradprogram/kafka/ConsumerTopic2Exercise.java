@@ -1,13 +1,10 @@
 package dk.bec.gradprogram.kafka;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import static dk.bec.gradprogram.kafka.LoggerFactory.logRunning;
 
 public class ConsumerTopic2Exercise {
     public static void main(String[] args) {
-        Logger logger = LoggerFactory.getLogger(ConsumerTopic2Exercise.class);
-        logger.info("Running");
-
+        logRunning(ConsumerTopic2Exercise.class);
         //Todo Create consumer configuration for connection to local kafka instance
 
         //Todo Create consumer
