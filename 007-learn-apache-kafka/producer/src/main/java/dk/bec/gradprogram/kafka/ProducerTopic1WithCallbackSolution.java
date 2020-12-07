@@ -13,7 +13,7 @@ public class ProducerTopic1WithCallbackSolution {
 
     public static void main(String[] args) {
         Logger logger = LoggerFactory.getLogger(ProducerTopic1WithCallbackSolution.class);
-        logger.info("ProducerTopic1WithCallbackSolution is running");
+        logger.info("Running");
 
         //Todo Print "Record send successfully" to console when a record was successfully send
         //Todo Print "Record send failed" to console when a record was not successfully send

@@ -8,7 +8,7 @@ import static dk.bec.gradprogram.kafka.ProducerFactory.createHelloWorldProducer;
 public class ProducerTopic1Solution {
     public static void main(String[] args) {
         Logger logger = LoggerFactory.getLogger(ProducerTopic1Solution.class);
-        logger.info("ProducerTopic1Solution is running");
+        logger.info("Running");
         createHelloWorldProducer().sendData("topic1");
     }
 
