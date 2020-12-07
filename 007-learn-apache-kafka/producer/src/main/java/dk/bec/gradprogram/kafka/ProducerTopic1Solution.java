@@ -26,10 +26,13 @@ public class ProducerTopic1Solution {
         KafkaProducer<String, String> producer = new KafkaProducer<>(properties);
 
         //Todo send data to topic
-        String topic = "topic1";
-        String value = "Hello world "+ LocalDateTime.now();
-        ProducerRecord<String, String> record = new ProducerRecord<>(topic, value);
-        producer.send(record);
+        for (int i = 0; i < 10; i++) {
+            String topic = "topic1";
+            String value = "Hello world "+ LocalDateTime.now();
+            ProducerRecord<String, String> record = new ProducerRecord<>(topic, value);
+            producer.send(record);
+        }
+
         producer.flush();
         producer.close();
     }
