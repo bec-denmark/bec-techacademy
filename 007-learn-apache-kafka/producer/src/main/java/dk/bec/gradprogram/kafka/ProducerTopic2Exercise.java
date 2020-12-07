@@ -12,5 +12,6 @@ public class ProducerTopic2Exercise {
         //Todo Create the Producer
 
         //Todo send data to topic2
+        //Todo If you run this multiple times what partitions is the message send to
     }
 }
