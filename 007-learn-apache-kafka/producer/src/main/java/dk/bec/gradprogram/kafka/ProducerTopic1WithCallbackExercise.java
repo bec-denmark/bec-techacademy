@@ -7,7 +7,7 @@ public class ProducerTopic1WithCallbackExercise {
 
         //Todo Create the Producer
 
-        //Todo send data to topic
+        //Todo send data to topic1
         //Todo Print "Record send successfully" to console when a record was successfully send
         //Todo Print "Record send failed" to console when a record was not successfully send
 
