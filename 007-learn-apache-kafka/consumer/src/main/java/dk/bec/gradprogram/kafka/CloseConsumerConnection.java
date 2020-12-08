@@ -6,12 +6,12 @@ import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.CountDownLatch;
 
-public class ConsumerRunnable implements Runnable {
-    private static final Logger logger = LoggerFactory.getLogger(ConsumerRunnable.class);
+public class CloseConsumerConnection implements Runnable {
+    private static final Logger logger = LoggerFactory.getLogger(CloseConsumerConnection.class);
     private final KafkaConsumerPrinter consumer;
     private final CountDownLatch latch;
 
-    public ConsumerRunnable(KafkaConsumerPrinter consumerPrinter, CountDownLatch latch) {
+    public CloseConsumerConnection(KafkaConsumerPrinter consumerPrinter, CountDownLatch latch) {
         this.consumer = consumerPrinter;
         this.latch = latch;
     }
@@ -24,6 +24,7 @@ public class ConsumerRunnable implements Runnable {
             logger.info("Received shutdown signal!");
         } finally {
             latch.countDown();
+            logger.info("Consumer connection closing");
             consumer.close();
         }
     }
