@@ -12,6 +12,7 @@ public class ProducerTopic1WithCallbackExercise {
         //Todo send data to topic1
         //Todo Print "Record send successfully" to console when a record was successfully send
         //Todo Print "Record send failed" to console when a record was not successfully send
-        //Todo Try to stop the broker and see what happens when you try to send
+        //Question Which partition(s) was produced to (See in the application log)
+        //Question What happens when you try to send and the broker is stopped
     }
 }

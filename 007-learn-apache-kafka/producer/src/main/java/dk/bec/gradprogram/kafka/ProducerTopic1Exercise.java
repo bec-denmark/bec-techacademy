@@ -11,5 +11,7 @@ public class ProducerTopic1Exercise {
         //Todo Create the Producer
 
         //Todo send data to topic1
+
+        //Question Which partition(s) was produced to (See in the application log)
     }
 }

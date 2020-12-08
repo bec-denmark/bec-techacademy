@@ -10,6 +10,8 @@ public class ProducerTopic2Exercise {
         //Todo Create the Producer
 
         //Todo send data to topic2
-        //Todo If you run this multiple times what partitions is the message send to
+
+        //Question Which partition(s) was produced to (See in the application log)
+        //Question Which partition(s) was produced to when you run the application multiple times(See in the consumer application log)
     }
 }

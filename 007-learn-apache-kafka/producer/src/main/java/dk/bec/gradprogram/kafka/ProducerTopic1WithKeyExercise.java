@@ -11,5 +11,6 @@ public class ProducerTopic1WithKeyExercise {
 
         //Todo send data to topic with name topic1 with key
 
+        //Question Which partition(s) was produced to (See in the application log)
     }
 }
