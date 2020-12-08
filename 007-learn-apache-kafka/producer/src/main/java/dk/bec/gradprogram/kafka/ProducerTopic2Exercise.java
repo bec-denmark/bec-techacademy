@@ -12,6 +12,6 @@ public class ProducerTopic2Exercise {
         //Todo send data to topic2
 
         //Question Which partition(s) was produced to (See in the application log)
-        //Question Which partition(s) was produced to when you run the application multiple times(See in the consumer application log)
+        //Question Which partition(s) was produced to when you run the application multiple times(See in the application log)
     }
 }
