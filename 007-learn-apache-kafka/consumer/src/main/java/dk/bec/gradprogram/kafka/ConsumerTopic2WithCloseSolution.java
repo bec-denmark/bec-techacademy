@@ -18,7 +18,7 @@ import static dk.bec.gradprogram.kafka.LoggerFactory.logRunning;
 public class ConsumerTopic2WithCloseSolution {
     public static void main(String[] args) {
         Logger logger = logRunning(ConsumerTopic2WithCloseSolution.class);
-        KafkaConsumerPrinter consumerPrinter = createConsumerPrinter(logger).subscribeTo("topic2");
-        createThreadedConsumerShutdownListener(consumerPrinter).poll();
+        KafkaConsumerClosable consumer = createConsumerPrinter(logger).subscribeTo("topic2");
+        createThreadedConsumerShutdownListener(consumer).poll();
     }
 }

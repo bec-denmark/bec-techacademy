@@ -10,7 +10,7 @@ import java.util.Properties;
 
 import static java.util.Collections.singletonList;
 
-public class KafkaConsumerPrinter {
+public class KafkaConsumerPrinter implements KafkaConsumerClosable {
     private KafkaConsumer<String, String> consumer;
     private Logger logger;
 
@@ -23,12 +23,13 @@ public class KafkaConsumerPrinter {
         return pollPrinter;
     }
 
-    public KafkaConsumerPrinter subscribeTo(String topic) {
+    public KafkaConsumerClosable subscribeTo(String topic) {
         consumer.subscribe(singletonList(topic));
 
         return this;
     }
 
+    @Override
     public void poll() {
         while (true){
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
@@ -39,10 +40,12 @@ public class KafkaConsumerPrinter {
         }
     }
 
+    @Override
     public void close() {
         consumer.close();
     }
 
+    @Override
     public void wakeup() {
         consumer.wakeup();
     }

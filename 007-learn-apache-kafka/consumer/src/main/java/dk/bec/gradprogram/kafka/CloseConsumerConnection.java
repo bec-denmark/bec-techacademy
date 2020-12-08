@@ -8,11 +8,11 @@ import java.util.concurrent.CountDownLatch;
 
 public class CloseConsumerConnection implements Runnable {
     private static final Logger logger = LoggerFactory.getLogger(CloseConsumerConnection.class);
-    private final KafkaConsumerPrinter consumer;
+    private final KafkaConsumerClosable consumer;
     private final CountDownLatch latch;
 
-    public CloseConsumerConnection(KafkaConsumerPrinter consumerPrinter, CountDownLatch latch) {
-        this.consumer = consumerPrinter;
+    public CloseConsumerConnection(KafkaConsumerClosable consumer, CountDownLatch latch) {
+        this.consumer = consumer;
         this.latch = latch;
     }
 

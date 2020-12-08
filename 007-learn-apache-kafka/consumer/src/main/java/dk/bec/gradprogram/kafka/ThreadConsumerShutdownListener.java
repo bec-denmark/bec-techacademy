@@ -10,9 +10,9 @@ public class ThreadConsumerShutdownListener {
     private final CloseConsumerConnection closeConsumerConnection;
     private final CountDownLatch latch;
 
-    private ThreadConsumerShutdownListener(KafkaConsumerPrinter consumerPrinter) {
+    private ThreadConsumerShutdownListener(KafkaConsumerClosable consumer) {
         this.latch = new CountDownLatch(1);
-        this.closeConsumerConnection = new CloseConsumerConnection(consumerPrinter, latch);
+        this.closeConsumerConnection = new CloseConsumerConnection(consumer, latch);
         Runtime.getRuntime().addShutdownHook(new Thread( () -> {
             logger.info("Caught application shutdown hook");
             closeConsumerConnection.shutdown();
@@ -20,7 +20,7 @@ public class ThreadConsumerShutdownListener {
         }));
     }
 
-    public static ThreadConsumerShutdownListener createThreadedConsumerShutdownListener(KafkaConsumerPrinter consumerPrinter) {
+    public static ThreadConsumerShutdownListener createThreadedConsumerShutdownListener(KafkaConsumerClosable consumerPrinter) {
         return new ThreadConsumerShutdownListener(consumerPrinter);
     }
 
