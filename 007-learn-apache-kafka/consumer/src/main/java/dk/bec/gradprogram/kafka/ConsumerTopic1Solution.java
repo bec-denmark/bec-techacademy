@@ -8,7 +8,7 @@ import static dk.bec.gradprogram.kafka.LoggerFactory.logRunning;
 public class ConsumerTopic1Solution {
     public static void main(String[] args) {
         Logger logger = logRunning(ConsumerTopic1Solution.class);
-        createConsumerPrinter().subscribeTo("topic1").poll(logger);
+        createConsumerPrinter(logger).subscribeTo("topic1").poll();
     }
 
 }

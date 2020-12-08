@@ -12,11 +12,13 @@ import static java.util.Collections.singletonList;
 
 public class KafkaConsumerPrinter {
     private KafkaConsumer<String, String> consumer;
+    private Logger logger;
 
-    public static KafkaConsumerPrinter createConsumerPrinter() {
+    public static KafkaConsumerPrinter createConsumerPrinter(Logger logger) {
         Properties properties = ConsumerProperties.createLocalConsumerProperties();
         KafkaConsumerPrinter pollPrinter = new KafkaConsumerPrinter();
         pollPrinter.consumer = new KafkaConsumer<>(properties);
+        pollPrinter.logger = logger;
 
         return pollPrinter;
     }
@@ -27,7 +29,7 @@ public class KafkaConsumerPrinter {
         return this;
     }
 
-    public void poll(Logger logger) {
+    public void poll() {
         while (true){
             ConsumerRecords<String, String> records = consumer.poll(Duration.ofMillis(100));
 
@@ -37,4 +39,11 @@ public class KafkaConsumerPrinter {
         }
     }
 
+    public void close() {
+        consumer.close();
+    }
+
+    public void wakeup() {
+        consumer.wakeup();
+    }
 }
