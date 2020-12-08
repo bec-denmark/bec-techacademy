@@ -19,6 +19,6 @@ public class ConsumerTopic2WithCloseSolution {
     public static void main(String[] args) {
         Logger logger = logRunning(ConsumerTopic2WithCloseSolution.class);
         KafkaConsumerPrinter consumerPrinter = createConsumerPrinter(logger).subscribeTo("topic2");
-        createThreadedConsumerShutdownListener(consumerPrinter).startConsumerPoll();
+        createThreadedConsumerShutdownListener(consumerPrinter).poll();
     }
 }

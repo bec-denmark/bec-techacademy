@@ -24,7 +24,7 @@ public class ThreadConsumerShutdownListener {
         return new ThreadConsumerShutdownListener(consumerPrinter);
     }
 
-    public void startConsumerPoll() {
+    public void poll() {
         Thread thread = new Thread(closeConsumerConnection);
         thread.start();
         await("Application is closing");
