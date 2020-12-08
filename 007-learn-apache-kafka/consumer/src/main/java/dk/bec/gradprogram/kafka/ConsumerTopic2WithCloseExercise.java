@@ -24,6 +24,8 @@ public class ConsumerTopic2WithCloseExercise {
 
         //Todo close consumer connection before exiting.
 
-        //Todo How fast is consumer removed from group by GroupCoordinator
+        //Question Which partition(s) was consumed from (See in the consumer application log)
+
+        //Question How much time did it take before a rebalance happen? (Look in the broker log)
     }
 }

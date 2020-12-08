@@ -20,8 +20,8 @@ public class ThreadConsumerShutdownListener {
         }));
     }
 
-    public static ThreadConsumerShutdownListener createThreadedConsumerShutdownListener(KafkaConsumerClosable consumerPrinter) {
-        return new ThreadConsumerShutdownListener(consumerPrinter);
+    public static ThreadConsumerShutdownListener createThreadedConsumerShutdownListener(KafkaConsumerClosable consumer) {
+        return new ThreadConsumerShutdownListener(consumer);
     }
 
     public void poll() {

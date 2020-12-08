@@ -12,5 +12,9 @@ public class ConsumerTopic1Exercise {
         //Todo subscribe consumer to topics
 
         //Todo Poll for new data and write key, val, partition and offset to console
+
+        //Question Which partition(s) was consumed from (See in the consumer application log)
+
+        //Question How much time did it take before a rebalance happen? (Look in the broker log)
     }
 }
