@@ -2,6 +2,8 @@ package dk.bec.gradprogram.kafka.consumer;
 
 import java.util.ArrayList;
 import java.util.Properties;
+import java.time.Duration;
+import java.time.temporal.ChronoUnit;
 
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
@@ -33,7 +35,7 @@ public class SecureConsumer {
             consumer.subscribe(topics);
 
             while(true){
-                ConsumerRecords<String, String> records = consumer.poll(1000);
+                ConsumerRecords<String, String> records = consumer.poll(Duration.of(1000, ChronoUnit.MILLIS));
                 for(ConsumerRecord<String, String> record : records){
                     System.out.println("Incoming Message from Topic " + record.topic()  + " received. Full Contents: " +  record.toString()  );
                 }
